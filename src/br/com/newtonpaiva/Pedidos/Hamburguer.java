@@ -4,11 +4,12 @@ public class Hamburguer {
 
     private String nome;
     private Double valor;
-    private Boolean artesanal;
+    private Integer artesanal;
 
-    public void CalculaValor(Boolean artesanal){
-        if (artesanal)
+    public Double CalculaValor(Integer artesanal, Double valor){
+        if (artesanal == 1)
             valor = valor + 8;
+        return valor;
     }
 
     public String getNome() {
@@ -27,11 +28,11 @@ public class Hamburguer {
         this.valor = valor;
     }
 
-    public Boolean getArtesanal() {
+    public Integer getArtesanal() {
         return artesanal;
     }
 
-    public void setArtesanal(Boolean artesanal) {
+    public void setArtesanal(Integer artesanal) {
         this.artesanal = artesanal;
     }
 }

@@ -19,7 +19,6 @@ public class Main {
         System.out.println(h1.getNome());
 
         h1.setValor(10.0);
-        h1.CalculaValor(true);
 
         System.out.println(h1.getValor());
 
