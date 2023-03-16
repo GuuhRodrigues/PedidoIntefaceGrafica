@@ -21,9 +21,12 @@ public class Restaurante {
                 nome = JOptionPane.showInputDialog("Entre com o nome: ");
                 valor = Double.parseDouble(JOptionPane.showInputDialog("Entre com o valor: "));
                 borda = Integer.parseInt(JOptionPane.showInputDialog("Quer Borda ?!\n(1)Sim\n(2)Não"));
-                p1.setValor(p1.CalculaValor(borda, valor));
-
-                JOptionPane.showMessageDialog(null, "O seu pedido ficou no valor de " + p1.getValor(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
+                if (borda == 2 || borda == 1) {
+                    p1.setValor(p1.CalculaValor(borda, valor));
+                    JOptionPane.showMessageDialog(null, "O seu pedido ficou no valor de " + p1.getValor(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                    JOptionPane.showMessageDialog(null, "Opção Inválida", "Resultado", JOptionPane.ERROR_MESSAGE);
             }
             if (opcao == 2) {
                 nome = JOptionPane.showInputDialog("Entre com o nome: ");
