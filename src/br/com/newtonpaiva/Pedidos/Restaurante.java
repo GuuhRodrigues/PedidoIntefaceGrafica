@@ -9,10 +9,9 @@ public class Restaurante {
         Pizza p1 = new Pizza();
         Hamburguer h1 = new Hamburguer();
 
-        int opcao;
+        int opcao, borda, artesanal;
         String nome;
         Double valor;
-        Integer borda, artesanal;
 
 
         do {
@@ -33,7 +32,7 @@ public class Restaurante {
                 valor = Double.parseDouble(JOptionPane.showInputDialog("Entre com o valor: "));
                 artesanal = Integer.parseInt(JOptionPane.showInputDialog("O Hamburguer será artesanal ?\n(1)Sim\n(2)Não"));
                 if (artesanal == 2 || artesanal == 1) {
-                    p1.setValor(p1.CalculaValor(artesanal, valor));
+                    h1.setValor(p1.CalculaValor(artesanal, valor));
                     JOptionPane.showMessageDialog(null, "O seu pedido ficou no valor de " + h1.getValor(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 }
                 else
